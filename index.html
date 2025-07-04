@@ -6,66 +6,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SHIVA KUMAR</title>
 
-  <!-- SEO Metadata -->
+  <!-- SEO Metadata for better search engine visibility -->
   <meta name="description" content="Shiva Kumar's portfolio. Web developer with a focus on front-end development, UI/UX, and cybersecurity projects." />
   <meta name="keywords" content="Shiva Kumar, Web Developer, Portfolio, UI/UX, 2048 Game, Network Analysis" />
 
-  <!-- Link to external CSS file -->
+  <!-- External CSS File -->
   <link rel="stylesheet" href="style.css" />
-  <!-- ScrollReveal Library -->
-<script src="https://unpkg.com/scrollreveal"></script>
 
+  <!-- ScrollReveal Library for scroll animations -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
 
-  <!-- ========== HEADER SECTION ========== -->
-   <header>
-  <div class="header-container">
-    <div class="logo">SHIVA KUMAR</div>
+  <!-- ================= HEADER SECTION ================= -->
+  <header>
+    <div class="header-container">
+      <!-- Logo / Name -->
+      <div class="logo">SHIVA KUMAR</div>
 
-    <nav id="navbar">
-      <a href="#home" tabindex="1">Home</a>
-      <a href="#about" tabindex="2">About</a>
-      <a href="#projects" tabindex="3">Projects</a>
-      <a href="#contact" tabindex="4">Contact</a>
-      <button id="themeToggle" aria-label="Toggle Dark/Light Theme">🌙</button>
-    </nav>
+      <!-- Navigation Menu -->
+      <nav id="navbar">
+        <a href="#home" tabindex="1">Home</a>
+        <a href="#about" tabindex="2">About</a>
+        <a href="#projects" tabindex="3">Projects</a>
+        <a href="#contact" tabindex="4">Contact</a>
+      </nav>
 
-    <div class="hamburger" id="hamburger">&#9776;</div>
-  </div>
-</header>
-
-  <!-- Dummy Home Section for anchor target -->
- <section id="home" class="home-boxed" aria-label="Home Section">
-  <div class="home-content">
-    <h1>Hello, I'm <span>Shiva Kumar</span></h1>
-    <h2><span id="typewriter-text"></span><span class="cursor">|</span></h2>
-    <p>A passionate web developer focused on front-end design, UI/UX, and cybersecurity tools.</p>
-    <div class="home-buttons">
-      <a href="#projects" class="cta-btn">View Projects</a>
-      <a href="My Resume.pdf" class="cta-btn secondary" target="_blank">Download Resume</a>
+      <!-- Hamburger Menu for Mobile Devices -->
+      <div class="hamburger" id="hamburger">&#9776;</div>
     </div>
-  </div>
-</section>
+  </header>
 
-  <!-- ========== ABOUT SECTION ========== -->
-  <section id="about" aria-label="About Me Section">
-    <!-- Profile image -->
-    <img src="ms.png" alt="Shiva Kumar Profile Picture" class="profile-pic" />
+  <!-- ================= HOME SECTION ================= -->
+  <section id="home" class="home-hero" aria-label="Home Section">
+    <div class="home-content">
+      <!-- Hero Intro -->
+      <h1>Hello, I'm <span>Shiva Kumar</span></h1>
 
-    <!-- About text -->
-    <p>
-      Hi, I'm Shiva Kumar, a web developer and designer passionate about creating interactive web experiences.
-      I specialize in front-end development, UI/UX design, and building responsive websites.
-      Here's a showcase of my work and projects!
-    </p>
+      <!-- Typewriter Text Effect -->
+      <h2>
+        <span class="typewrite" data-period="2000" data-type='[ "Web Developer", "UI/UX Designer", "Problem Solver" ]'></span>
+      </h2>
+
+      <!-- Hero Description -->
+      <p>A passionate web developer focused on front-end design, UI/UX, and cybersecurity tools.</p>
+      <p>Let’s create something great!</p>
+
+      <!-- Call to Action Buttons -->
+      <div class="home-buttons">
+        <a href="#projects" class="cta-btn">View Projects</a>
+        <a href="My Resume.pdf" class="cta-btn secondary" target="_blank">Download Resume</a>
+      </div>
+    </div>
   </section>
 
-  <!-- ========== PROJECTS SECTION ========== -->
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="about-modern" aria-label="About Section">
+    <div class="about-container">
+      <!-- Profile Picture -->
+      <div class="about-image">
+        <img src="ms.png" alt="Shiva Kumar Profile Picture" class="profile-pic" />
+      </div>
+
+      <!-- About Text -->
+      <div class="about-details">
+        <h2>About Me</h2>
+        <p>Hello! I'm <strong>Shiva Kumar</strong>, a <span class="highlight">Front-End Developer</span> and <span class="highlight">UI/UX Designer</span> with a strong passion for building interactive, modern web applications.</p>
+        <p>I bring ideas to life through clean code, responsive layouts, and smooth animations. I enjoy combining logic and creativity to deliver seamless user experiences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS SECTION ================= -->
   <section id="projects" aria-label="Projects Section">
     <h2>My Projects</h2>
 
-    <!-- Container for all project cards -->
+    <!-- Project Cards Grid -->
     <div class="projects-grid">
 
       <!-- Project 1: 2048 Game -->
@@ -94,45 +110,40 @@
           <p>Implemented a proactive defense strategy using hypergame theory and counter-deception models.</p>
         </div>
       </article>
-      
+
     </div>
   </section>
 
-  <!-- ========== BACK TO TOP BUTTON ========== -->
+  <!-- ================= SCROLL TO TOP BUTTON ================= -->
   <button id="toTopBtn" title="Go to top">&#8679;</button>
 
-  <!-- ========== CONTACT SECTION ========== -->
+  <!-- ================= CONTACT SECTION ================= -->
   <section id="contact" aria-label="Contact Section">
     <h2>Contact</h2>
-
-    <!-- Message -->
     <p>If you're interested in collaborating or just want to chat about technology, feel free to reach out!</p>
 
-    <!-- Email -->
+    <!-- Email Link -->
     <p>Email: 
       <a href="mailto:shivakumarmacharla16@gmail.com">
         shivakumarmacharla16@gmail.com
       </a>
     </p>
 
-    <!-- Social links -->
+    <!-- Social Media Links -->
     <p>
       Connect with me on
       <a href="https://www.linkedin.com/in/macharla-shiva-kumar-939120278/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       or check out my work on
       <a href="https://github.com/shivamacharlaf9" target="_blank" rel="noopener noreferrer">GitHub</a>.
     </p>
-
-    <!-- Resume button -->
-    <a href="My Resume.pdf" target="_blank" class="resume-btn">View Resume</a>
   </section>
 
-  <!-- ========== FOOTER SECTION ========== -->
+  <!-- ================= FOOTER ================= -->
   <footer>
     <p>&copy; 2025 Shiva Kumar. All rights reserved.</p>
   </footer>
 
-  <!-- Link to external JavaScript -->
+  <!-- External JavaScript File -->
   <script src="script.js"></script>
 </body>
 </html>
