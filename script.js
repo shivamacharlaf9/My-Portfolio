@@ -11,6 +11,73 @@ document.querySelectorAll('nav a').forEach(anchor => {
   });
 });
 
+class TxtType {
+  constructor(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  }
+
+  tick() {
+    const i = this.loopNum % this.toRotate.length;
+    const fullTxt = this.toRotate[i];
+
+    this.txt = this.isDeleting
+      ? fullTxt.substring(0, this.txt.length - 1)
+      : fullTxt.substring(0, this.txt.length + 1);
+
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+    let delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) delta /= 2;
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+
+    setTimeout(() => this.tick(), delta);
+  }
+}
+
+window.onload = function () {
+  const elements = document.getElementsByClassName('typewrite');
+  for (let i = 0; i < elements.length; i++) {
+    const toRotate = elements[i].getAttribute('data-type');
+    const period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtType(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+};
+
+// Show or hide the scroll-to-top button
+window.onscroll = function () {
+  const btn = document.getElementById("toTopBtn");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// Smooth scroll to top when button is clicked
+document.getElementById("toTopBtn").addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
 
 // === Section Reveal on Scroll ===
 // Uses Intersection Observer to animate sections and project cards
@@ -147,5 +214,26 @@ const navbar = document.getElementById("navbar");
 
 hamburger.addEventListener("click", () => {
   navbar.classList.toggle("active");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toTopBtn = document.getElementById("toTopBtn");
+
+  // Show button on scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      toTopBtn.style.display = "block";
+    } else {
+      toTopBtn.style.display = "none";
+    }
+  });
+
+  // Smooth scroll to top on button click
+  toTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
 });
 
