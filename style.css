@@ -13,58 +13,6 @@ body.dark-theme {
   --card-bg: #2a2a2a;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-section {
-  padding: 40px 20px;
-}
-
-@media (max-width: 500px) {
-  section {
-    padding: 30px 15px;
-  }
-}
-
-.cta-btn {
-  padding: 14px 25px;
-  min-width: 160px;
-  font-size: 1.1rem;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.home-buttons {
-  flex-direction: column;
-  gap: 15px;
-}
-
-.project-card {
-  min-width: 280px;
-}
-
-@media (max-width: 400px) {
-  .project-info h3 {
-    font-size: 1.3rem;
-  }
-
-  .project-info p {
-    font-size: 0.95rem;
-  }
-}
-
-html, body {
-  scroll-snap-type: y mandatory;
-}
-
-section {
-  scroll-snap-align: start;
-}
-
-
-
 /* === General Reset and Base Styling === */
 * {
   margin: 0;
