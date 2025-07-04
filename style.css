@@ -13,6 +13,19 @@ body.dark-theme {
   --card-bg: #2a2a2a;
 }
 
+h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+
 @media (max-width: 768px) {
   .home-hero h1 {
     font-size: 2rem;
