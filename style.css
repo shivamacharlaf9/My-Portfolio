@@ -13,6 +13,91 @@ body.dark-theme {
   --card-bg: #2a2a2a;
 }
 
+/* ======= HEADER STICKY FIX & MOBILE SPACING ======= */
+header {
+  background-color: #000;
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    flex-direction: column;
+    display: none;
+    width: 80%;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    color: var(--accent-color);
+    cursor: pointer;
+  }
+}
+
+/* ======= HOME SECTION FIX FOR SMALL DEVICES ======= */
+.home-hero {
+  padding-top: 100px; /* ensures spacing from fixed header */
+  padding-bottom: 50px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background: #1e1e1e;
+  color: white;
+}
+
+.home-content h1 {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  margin-bottom: 10px;
+}
+
+.home-content h2 {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+
 img {
   max-width: 100%;
   height: auto;
